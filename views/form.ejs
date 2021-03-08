@@ -1,0 +1,23 @@
+
+<%- include('./partials/header') %>
+
+
+<% if(username) { %>
+<form style="margin: 10px;" action='/' method = 'POST'>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content</label>
+        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Image Url</label>
+      <input name="logoUrl" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
+    </div>
+    <input type="submit" class = "btn btn-success" value = 'Cluck!' style = "margin-top: 15px; float:right;">
+  </form>
+
+<% } else { %>
+  <h1 style="margin:15px; color: red;"> You have to be signed in to make a cluck</h1>
+
+  <% } %>
+
+  <%- include('./partials/footer') %>

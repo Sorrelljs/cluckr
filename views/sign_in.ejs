@@ -1,0 +1,26 @@
+
+<%- include('./partials/header') %>
+
+
+<% if (username){ %>
+
+    <form  action = '/sign_out' method = 'POST' style = "margin: 20px;">
+        <div class="form-group">
+            <span>Welcome, <%= username %> </span>
+          <input type="submit" class = "btn btn-danger" value = 'Sign Out' style = "margin-top: 15px; float:right;">
+        </div>
+   </form>
+    <% } else { %> 
+
+        <form  action = '/sign_in' method = 'POST' style = "margin: 20px;">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Username</label>
+              <input name = "username" type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe" name = "username">
+              <input type="submit" class = "btn btn-success" value = 'Sign in' style = "margin-top: 15px; float:right;">
+            </div>
+       </form>
+    <% } %>
+
+    <%- include('./partials/footer') %>
+
+ 
