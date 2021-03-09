@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "/css/bootstrap.min.css"/> 
+    <script defer src="/js/bootstrap.min.js"></script>
+    <title>Cluckr</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style = "border: black 1px solid;">
+        <a class="navbar-brand" href="/index"><img src="https://i.pinimg.com/originals/45/0b/35/450b3529fc9953266263123c8aeab433.png" width = "75px" height = "75px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/cluck">Cluck <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sign_in">cluck_master</a>
+            </li>
+            <% if(username) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/sign_in"><%= username %></a>
+            </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sign_in">Sign In</a>
+                  </li>
+  <% } %>
+
+           
+          </ul>
+        </div>
+      </nav>
