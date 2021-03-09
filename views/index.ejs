@@ -1,5 +1,16 @@
 <%- include('./partials/header') %>
 
+<h1>hello</h1>
 
+
+<% data.forEach(({ id, content, username, logoUrl, created_at }) => { %>
+    <a href="/articles/<%= id %>" class="list-group-item list-group-item-action" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+      </div>
+      <img src="<%= logoUrl %>" width = '50px' height = '50px'alt="">
+      <small> <%= username %></small> <small><%= created_at %></small>
+      <p class="mb-1"><%= content %></p>
+    </a>
+  <% }) %>
 
 <%- include('./partials/footer') %>

@@ -78,18 +78,9 @@ app.get("/index", (req, res) => {
 	knex("cluckr")
 		.select("*")
 		.from("cluckr")
-		.then(
-			(data) => console.log(data, data[0].id, data[0].username),
-			res.render(
-				"index"
-				// { data }
-				// getting data but not able to push through
-			)
-		);
-});
-
-app.get("/index", (req, res) => {
-	res.render("index.ejs");
+		.then((data) => {
+			res.render("index", { data });
+		});
 });
 
 // app.use("/clucks", clucksRouter);
